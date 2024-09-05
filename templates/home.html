@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Garden Design App</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Your Garden Design App</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'plant_list' %}">Plants</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="{% static 'images/hero_image.jpg' %}" alt="Garden image">
+            <h2>Plan Your Dream Garden</h2>
+            <p>Discover the perfect plants for your space.</p>
+            <a href="{% url 'plant_list' %}" class="button">Start Planning</a>
+        </section>
+
+        <section class="features">
+            <h2>Key Features</h2>
+            <div class="feature-card">
+                <img src="{% static 'images/feature1.png' %}" alt="Feature 1">
+                <h3>Plant Database</h3>
+                <p>Browse a vast collection of plants.</p>
+            </div>
+            <div class="feature-card">
+                <img src="{% static 'images/feature2.png' %}" alt="Feature 2">
+                <h3>Garden Planner</h3>
+                <p>Design your garden with ease.</p>
+            </div>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Garden Design App</p>
+    </footer>
+</body>
+</html>
